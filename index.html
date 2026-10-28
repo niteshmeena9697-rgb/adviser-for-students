@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchMind AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <div class="badge">SERPAPI • AI RESEARCH DEMO</div>
+            <h1>Search<span>Mind</span></h1>
+            <p>Search the web, compare sources, and turn results into useful research.</p>
+
+            <form id="searchForm" class="search-box">
+                <input
+                    id="query"
+                    type="text"
+                    placeholder="Try: best AI tools for students in 2026"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+
+            <div class="chips">
+                <button type="button" class="chip">Best Python courses</button>
+                <button type="button" class="chip">AI tools for students</button>
+                <button type="button" class="chip">Best laptops under ₹70000</button>
+            </div>
+        </header>
+
+        <section id="status" class="status hidden"></section>
+
+        <section id="summary" class="summary hidden">
+            <div>
+                <div class="section-label">SEARCHMIND</div>
+                <h2 id="summaryTitle">Search results</h2>
+                <p id="summaryText"></p>
+            </div>
+        </section>
+
+        <section id="resultsSection" class="hidden">
+            <div class="section-head">
+                <h2>Web Results</h2>
+                <span id="resultCount"></span>
+            </div>
+            <div id="results" class="results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <span>SearchMind AI</span>
+        <span>Powered by SerpAPI</span>
+    </footer>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
