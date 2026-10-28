@@ -21,8 +21,6 @@ Copy `.env.example` to `.env` and set:
 
     SERPAPI_KEY=your_real_key
 
-Do NOT upload `.env` to GitHub.
-
 ## 4. Run
 
     python app.py
